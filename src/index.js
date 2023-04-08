@@ -3,7 +3,7 @@ import { jsonplaceholderAPI, jsonplaceholderAPI } from "./jsonplaceholder-API";
 
 const postWrapperEl = document.querySelector('.js-posts');
 
-const loadMoreBtnEl - document.querySelector('load-more-btn');
+const loadMoreBtnEl = document.querySelector('load-more-btn');
 
 const JSONPlaceholderAPI = new jsonplaceholderAPI();
 
