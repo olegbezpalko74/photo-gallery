@@ -1,13 +1,22 @@
-fetch('https://jsonplaceholder.typicode.com/comments')
-.then( res => {
-   if (!res.ok) {
-    throw new Error(res.status);
-   } 
-   return res.json();
-})
+
+import { jsonplaceholderAPI, jsonplaceholderAPI } from "./jsonplaceholder-API";
+
+const postWrapperEl = document.querySelector('.js-posts');
+
+const loadMoreBtnEl - document.querySelector('load-more-btn');
+
+const JSONPlaceholderAPI = new jsonplaceholderAPI();
+
+
+
+
+const handleLoadMoreBtnClick = () => {
+    JSONPlaceholderAPI.fetchPost()
 .then(data => {
-    console.log(data);
+    postWrapperEl.insertAdjacentHTML('beforeend' ,)
 })
 .catch(err => {
     console.log(err);
 });
+
+}
