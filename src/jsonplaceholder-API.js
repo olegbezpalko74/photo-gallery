@@ -1,6 +1,14 @@
 export class jsonplaceholderAPI {
+
+    #BASE_URL = 'https://jsonplaceholder.typicode.com';
+
+    page = 0;
+
+    count = 20;
+
     fetchPost() {
-        return fetch('https://jsonplaceholder.typicode.com/posts?_limit=10&_page=2')
+
+        return fetch(`${this.#BASE_URL}/posts?_limit=${this.count}&_page=${this.page} `)
         .then( res => {
            if (!res.ok) {
             throw new Error(res.status);
@@ -8,4 +16,4 @@ export class jsonplaceholderAPI {
            return res.json();
         });
     }
-};
+}
