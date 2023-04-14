@@ -35,4 +35,4 @@ const handleLoadPosts = () => {
 
 loadMoreBtnEl.addEventListener('click', handleLoadPosts);
 
-handleLoadPosts();
+handleLoadPosts(); 
